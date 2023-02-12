@@ -7,6 +7,7 @@ import java.util.PriorityQueue;
 import java.util.Scanner;
 import java.util.logging.Level;
 import java.util.logging.Logger;
+import java.util.Map;
 import java.util.*;
 public class Frequency 
 {
@@ -15,17 +16,16 @@ public class Frequency
     {
 	String address = "C:\\Users\\Tringapps-User25\\freq.txt";
         File f = new File(address);
-        String str = "";
         Scanner sc = new Scanner(f);
         Logger logger = Logger.getLogger("hi");
 	StringBuilder sb = new StringBuilder();
         HashMap<String,Integer> wordcount = new HashMap<>();
         while (sc.hasNextLine())
         {
-        	str.append(sc.nextLine());
-        	str.append(" ");
+        	sb.append(sc.nextLine());
+        	sb.append(" ");
         }
-        String[] words = str.split(" ");
+        String[] words = sb.toString().split(" ");
         for(int i=0;i<words.length;i++)
         {
         	if(wordcount.containsKey(words[i]))
