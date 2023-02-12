@@ -7,8 +7,6 @@ import java.util.PriorityQueue;
 import java.util.Scanner;
 import java.util.logging.Level;
 import java.util.logging.Logger;
-import java.util.Map;
-import java.util.*;
 public class Frequency 
 {
 
@@ -38,7 +36,7 @@ public class Frequency
         	}
         	
         }
-        PriorityQueue<HashMap.Entry<String,Integer>> pq = new PriorityQueue<>((a,b)-> {
+        PriorityQueue<Map.Entry<String,Integer>> pq = new PriorityQueue<>((a,b)-> {
         	return b.getValue() - a.getValue();
         });    
         	pq.addAll(wordcount.entrySet());
